@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ANI Care Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
     <div class="container">
         <section class="left">
             <div class="brand">♥ ANI Care</div>
-            <img src="heartwarming_emotional_high_quality_photograph_of_a_rescued_golden_retriever.png" alt="A dog rescued beside a kitten">
+            <img src="heartwarming_emotional_high_quality_photograph_of_a_rescued_golden_retriever.png" alt="Rescued Animal">
 
             <div class="quote">“Every animal deserves kindness, safety, and a chance
             to receive care. Together, we can make rescue easier.”
@@ -26,12 +26,15 @@
         <h1>Welcome Back</h1>
         <p class="subtitle">Sign in to report animals in need, follow rescue cases,and help connect animals with care.</p>
 
-        <form action="login.php" method="POST">
+        <form id="LoginForm" action="login.php" method="POST" novalidate>
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" placeholder="hello@gmail.com" autocomplete="email" required>
+        <small class="error" id="emailError"></small>
+
         
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required> 
+        <small class="error" id="emailError"></small>
         <div class="forget">
             <a href="forget_password.php">Forget password</a>
         </div>
@@ -39,13 +42,16 @@
         <label class="remember">
             <input type="checkbox" name="remember">Remember
         </label>
+        <p id="loginMessage" role="status" aria-live="polite"></p>
         <button type="submit">Sign In to ANI Care ♥</button>
         </form>
         <p class="register">
             New to ANI Care?<br>
-            <a href="register.php">Join our community - create an account</a>
+            <a href="register.html">Join our community - create an account</a>
         </p>
         </section>
     </div>
+
+<script src="login.js"></script>
 </body>
 </html>

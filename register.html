@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANI Care Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <section class="left">
+            <div class="brand">♥ ANI Care</div>
+
+            <img src="heartwarming_emotional_high_quality_photograph_of_a_rescued_golden_retriever.png"
+                 alt="Rescued Animal">
+
+            <div class="quote">
+                “Every animal deserves kindness, safety, and a chance
+                to receive care. Together, we can make rescue easier.”
+
+                <br><br>
+
+                <strong>ANI Care - Connecting animals with help.</strong>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="brand">♥ ANI Care Rescue Portal</div>
+
+            <h1>Join ANI Care</h1>
+            <p class="subtitle">
+                Become part of a community working to protect animals.
+            </p>
+
+            <form id="registerForm" action="register.php" method="POST" novalidate>
+                <label for="full_name">Full Name</label>
+                <input type="text" id="full_name" name="full_name"
+                       placeholder="Enter your full name" required>
+                <small class="error" id="nameError"></small>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email"
+                       placeholder="hello@gmail.com" required>
+                <small class="error" id="emailError"></small>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password"
+                       placeholder="Create a password" minlength="8" required>
+                <small class="error" id="passwordError"></small>
+
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password"
+                       name="confirm_password"
+                       placeholder="Enter your password again"
+                       minlength="8" required>
+                <small class="error" id="confirmError"></small>
+
+                <label for="role">Account Type</label>
+                <select id="role" name="role" required>
+                    <option value="" disabled selected>Choose account type</option>
+                    <option value="citizen">Citizen</option>
+                    <option value="provider">Rescue Provider</option>
+                </select>
+                <small class="error" id="roleError"></small>
+
+                <p id="formMessage" role="status" aria-live="polite"></p>
+
+                <button type="submit">Create Account ♥</button>
+            </form>
+
+            <p class="login">
+                Already have an account?
+                <a href="login.html">Sign in</a>
+            </p>
+        </section>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
