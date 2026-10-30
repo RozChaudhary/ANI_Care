@@ -13,12 +13,12 @@ form.addEventListener("submit", async function(event) {
     message.style.color = "#c0392b";
 
     if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        loginMessage.textContent = "Please enter a valid email address.";
+        emailError.textContent = "Please enter a valid email address.";
         return;
     }
 
     if (!password) {
-        loginMessage.textContent = "Please enter your password.";
+        passwordError.textContent = "Please enter your password.";
         return;
     }
 

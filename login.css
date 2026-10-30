@@ -147,6 +147,23 @@ button:hover{
     margin: 8px 0;
 }
 
+
+.error {
+    display: block;
+    width: 100%;
+    color: #c0392b;
+    font-size: 13px;
+    margin: 5px 0 12px;
+    line-height: 1.4;
+}
+
+#emailError:empty,
+#passwordError:empty {
+    display: none;
+}
+
+
+
 @media(max-width:650px){
     .container{
         grid-template-columns: 1fr;

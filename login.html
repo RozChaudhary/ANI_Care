@@ -34,15 +34,16 @@
         
         <label for="password">Password</label>
         <input type="password" id="password" name="password" placeholder="Enter your password" autocomplete="current-password" required> 
-        <small class="error" id="emailError"></small>
+        <small class="error" id="passwordError"></small>
         <div class="forget">
-            <a href="forget_password.php">Forget password</a>
+            <a href="forgot_password.html">Forget password</a>
         </div>
+        <p id="loginMessage" role="status" aria-live="polite"></p>
 
         <label class="remember">
             <input type="checkbox" name="remember">Remember
         </label>
-        <p id="loginMessage" role="status" aria-live="polite"></p>
+        
         <button type="submit">Sign In to ANI Care ♥</button>
         </form>
         <p class="register">
